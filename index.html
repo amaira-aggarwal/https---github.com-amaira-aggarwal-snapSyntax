@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snap Syntax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       @font-face {
@@ -35,7 +41,7 @@
         margin: 0;
         padding: 0;
         animation: backgroundCycle 9s infinite;
-        transition: background-color 2s ease;
+        transition: background-color 4s ease;
       }
 
       /* Navbar */
@@ -49,6 +55,15 @@
         top: 0;
         z-index: 1000;
         border-bottom: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      nav a:first-child {
+        position: absolute;
+        left: 20px;
       }
 
       nav a {
@@ -57,6 +72,21 @@
         text-decoration: none;
         font-size: 18px;
         white-space: nowrap;
+      }
+      .learn-more {
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline;
+        color: black;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .learn-more:hover {
+        opacity: 0.7;
       }
 
       /* Fixed Text */
@@ -81,7 +111,7 @@
 
       .view-all {
         position: fixed;
-        top: 80px;
+        top: 180px;
         right: 20px;
         font-size: 20px;
         text-decoration: underline;
@@ -91,10 +121,11 @@
 
       /* Content Section */
       .content {
-        margin-top: 180px;
+        margin-top: 80px;
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
+        padding-left: 15%;
       }
 
       /* Image Gallery */
@@ -137,6 +168,7 @@
         font-size: 20px;
         margin-top: 5px;
         font-weight: bold;
+        margin-right: 10%;
       }
 
       /* Full Width Image */
@@ -159,7 +191,7 @@
       /* Fixed Bottom-Left Image */
       .fixed-bottom-left {
         position: fixed;
-        bottom: 10px; /* Lowered the image */
+        bottom: 5px; /* Lowered the image */
         left: 20px;
         width: 150px;
         height: auto;
@@ -185,14 +217,17 @@
   </head>
   <body>
     <nav>
-      <a href="#info">Info</a>
-      <a href="#projects">Projects</a>
-      <a href="#brands">Brands &amp; E-Commerce Agency</a>
+      <a href="#" style="position: absolute; left: 20px">Pam</a>
+      <div style="display: inline-block">
+        <a></a>
+        <a href="#info">Info</a>
+        <a href="#projects">Projects</a>
+        <a href="#brands">Brands &amp; E-Commerce Agency</a>
+      </div>
     </nav>
 
     <!-- Fixed Text with Line Breaks -->
     <div class="fixed-text left-text">
-      Pam <br />
       Selected <br />
       Works
     </div>
@@ -202,8 +237,9 @@
     <!-- Middle Content Section -->
     <section class="content">
       <p>
-        We design high quality websites for<br />
-        brands and agencies and have<br />
+        We design high quality websites<br />
+        for brands and agencies. They are<br />fast, environmentally friendly
+        and <br />
         optimised SEO.
       </p>
     </section>
@@ -231,7 +267,7 @@
           </video>
         </div>
       </div>
-      <p class="caption">vv</p>
+      <p class="caption">Lucas de Tetmo</p>
 
       <div class="image-wrapper">
         <img src="image4.avif" alt="sm" />
@@ -261,7 +297,7 @@
           </video>
         </div>
       </div>
-      <p class="caption">What</p>
+      <p class="caption">Merch Biglio</p>
 
       <div class="image-wrapper">
         <img src="image6.avif" alt="Rebellion" />
@@ -271,17 +307,15 @@
           </video>
         </div>
       </div>
-      <p class="caption">What</p>
 
       <img src="image7.avif" alt="Full Width Image" class="full-width-image" />
 
       <!-- Text Below Full Width Image -->
-      <p class="full-width-text">
-        This is a sample text describing the full-width image.
-      </p>
+      <p class="full-width-text">This is the text in the footer</p>
     </section>
 
     <!-- Fixed Image at Bottom Left -->
     <img src="fixedd.png" alt="Fixed Bottom Left" class="fixed-bottom-left" />
+    <a class="learn-more">Learn More</a>
   </body>
 </html>
